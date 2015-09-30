@@ -1,0 +1,335 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{25A8A211-DCFC-466E-A38B-8D9380095027}</ProjectGuid>
+			<MainSource>sem3reader.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Release</Config>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>13.4</ProjectVersion>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>1</TargetedPlatforms>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<VerInfo_Build>208</VerInfo_Build>
+			<VerInfo_Locale>1049</VerInfo_Locale>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.208;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+			<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+			<DCC_UsePackage>vclx30;VCL30;inetdb30;inet30;vcldb30;vcldbx30;VclSmp30;Qrpt30;teeui30;teedb30;tee30;dss30;IBEVNT30;RxCtl;RxDB;RxTools;A302_R30;E108_R30;E108BR30;o307_r30;O307br30;rtl;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+			<DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+			<DCC_RangeChecking>true</DCC_RangeChecking>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_PentiumSafeDivide>true</DCC_PentiumSafeDivide>
+			<DCC_K>false</DCC_K>
+			<DCC_F>false</DCC_F>
+			<DCC_S>false</DCC_S>
+			<DCC_N>true</DCC_N>
+			<DebugSourcePath>G:\Program Files\Borland.7\apro\source\;$(DebugSourcePath)</DebugSourcePath>
+			<DCC_WriteableConstants>true</DCC_WriteableConstants>
+			<DCC_E>false</DCC_E>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<Icon_MainIcon>sem3reader_Icon.ico</Icon_MainIcon>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<Icon_MainIcon>sem3reader_Icon.ico</Icon_MainIcon>
+			<DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="basic.pas">
+				<Form>frmBasic</Form>
+			</DCCReference>
+			<DCCReference Include="main.pas">
+				<Form>frmMain</Form>
+			</DCCReference>
+			<DCCReference Include="box.pas"/>
+			<DCCReference Include="calendar.pas"/>
+			<DCCReference Include="crc.pas"/>
+			<DCCReference Include="get_time.pas"/>
+			<DCCReference Include="kernel.pas"/>
+			<DCCReference Include="ports.pas"/>
+			<DCCReference Include="progress.pas"/>
+			<DCCReference Include="realz.pas"/>
+			<DCCReference Include="input.pas"/>
+			<DCCReference Include="output.pas"/>
+			<DCCReference Include="support.pas"/>
+			<DCCReference Include="terminal.pas"/>
+			<DCCReference Include="timez.pas"/>
+			<DCCReference Include="ok.pas">
+				<Form>frmOK</Form>
+			</DCCReference>
+			<DCCReference Include="yesno.pas">
+				<Form>frmYesNo</Form>
+			</DCCReference>
+			<DCCReference Include="get_open.pas"/>
+			<DCCReference Include="get_config.pas"/>
+			<DCCReference Include="get_devices.pas"/>
+			<DCCReference Include="get_groups.pas"/>
+			<DCCReference Include="get_digitals.pas"/>
+			<DCCReference Include="get_canals.pas"/>
+			<DCCReference Include="setup2.pas">
+				<Form>frmSetup2</Form>
+			</DCCReference>
+			<DCCReference Include="get_open2.pas"/>
+			<DCCReference Include="get_time20.pas"/>
+			<DCCReference Include="get_time21.pas"/>
+			<DCCReference Include="get_time22.pas"/>
+			<DCCReference Include="get_setup2.pas"/>
+			<DCCReference Include="get_correction.pas"/>
+			<DCCReference Include="get_powcanmnt.pas"/>
+			<DCCReference Include="borders.pas"/>
+			<DCCReference Include="get_powgrpmnt.pas"/>
+			<DCCReference Include="get_powcanhou48.pas"/>
+			<DCCReference Include="profile.pas"/>
+			<DCCReference Include="get_powgrphou48.pas"/>
+			<DCCReference Include="get_powcanhou.pas"/>
+			<DCCReference Include="get_powgrphou.pas"/>
+			<DCCReference Include="get_defcanday.pas"/>
+			<DCCReference Include="get_defgrpday.pas"/>
+			<DCCReference Include="get_engcanday.pas"/>
+			<DCCReference Include="get_enggrpday.pas"/>
+			<DCCReference Include="get_enggrpmon.pas"/>
+			<DCCReference Include="get_maxcanday.pas"/>
+			<DCCReference Include="get_maxgrpday.pas"/>
+			<DCCReference Include="get_maxgrpmon.pas"/>
+			<DCCReference Include="get_cntcanmontar.pas"/>
+			<DCCReference Include="get_cntcanmon.pas"/>
+			<DCCReference Include="get_cntcantar.pas"/>
+			<DCCReference Include="get_cntcan.pas"/>
+			<DCCReference Include="get_currents1.pas"/>
+			<DCCReference Include="get_currents2.pas"/>
+			<DCCReference Include="get_transit.pas"/>
+			<DCCReference Include="get_events_counts.pas"/>
+			<DCCReference Include="get_events.pas"/>
+			<DCCReference Include="get_events_messages.pas"/>
+			<DCCReference Include="pipeline.pas"/>
+			<DCCReference Include="get.pas"/>
+			<DCCReference Include="reguest_pipeline2.pas"/>
+			<DCCReference Include="request_pipeline.pas"/>
+			<DCCReference Include="get_max.pas"/>
+			<DCCReference Include="period.pas"/>
+			<DCCReference Include="get_eng.pas"/>
+			<DCCReference Include="get_itmper.pas"/>
+			<DCCReference Include="get_itmpertar.pas"/>
+			<DCCReference Include="get_maxcanmon0.pas"/>
+			<DCCReference Include="get_maxgrpmon0.pas"/>
+			<DCCReference Include="direct.pas">
+				<Form>frmDirect</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="get_engcanmon.pas"/>
+			<DCCReference Include="get_eng_x2.pas"/>
+			<DCCReference Include="get_engcanday_x2.pas"/>
+			<DCCReference Include="get_engcanmon_x2.pas"/>
+			<DCCReference Include="get_enggrpday_x2.pas"/>
+			<DCCReference Include="get_enggrpmon_x2.pas"/>
+			<DCCReference Include="get_events_counts2.pas"/>
+			<DCCReference Include="get_events2.pas"/>
+			<DCCReference Include="get_cntcanmon_x2.pas"/>
+			<DCCReference Include="get_cntcan_x2.pas"/>
+			<DCCReference Include="get_cntcantar_x2.pas"/>
+			<DCCReference Include="get_cntcanmontar_x2.pas"/>
+			<None Include="sem3reader.todo"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">sem3reader.dpr</Source>
+					</Source>
+					<Language>
+						<Language Name="ProjectLang">$00000419</Language>
+					</Language>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">215</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.215</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win64">False</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<Deployment>
+					<DeployFile Class="DebugSymbols" Configuration="Release" LocalName="sem3reader.rsm">
+						<Platform Name="Win32">
+							<RemoteName>sem3reader.rsm</RemoteName>
+						</Platform>
+					</DeployFile>
+					<DeployFile Class="ProjectOutput" Configuration="Release" LocalName="sem3reader.exe">
+						<Platform Name="Win32"/>
+					</DeployFile>
+					<DeployClass Name="ProjectOutput" Required="true">
+						<Platform Name="OSX32">
+							<Operation>1</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DependencyPackage" Required="true">
+						<Platform Name="OSX32">
+							<Operation>1</Operation>
+							<Extensions>.dylib</Extensions>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+							<Extensions>.bpl</Extensions>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DependencyModule">
+						<Platform Name="OSX32">
+							<Operation>1</Operation>
+							<Extensions>.dylib</Extensions>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+							<Extensions>.dll;.bpl</Extensions>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="ProjectOSXInfoPList"/>
+					<DeployClass Name="File">
+						<Platform Name="OSX32">
+							<Operation>0</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DebugSymbols">
+						<Platform Name="OSX32">
+							<Operation>1</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DependencyFramework">
+						<Platform Name="OSX32">
+							<Operation>1</Operation>
+							<Extensions>.framework</Extensions>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="AdditionalDebugSymbols">
+						<Platform Name="OSX32">
+							<Operation>1</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="ProjectOSXResource">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\Resources</RemoteDir>
+							<Operation>1</Operation>
+						</Platform>
+					</DeployClass>
+					<ProjectRoot Name="$(PROJECTNAME)" Platform="OSX32"/>
+					<ProjectRoot Name="$(PROJECTNAME)" Platform="Win64"/>
+					<ProjectRoot Name="$(PROJECTNAME)" Platform="Win32"/>
+				</Deployment>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<Import Condition="Exists('$(MSBuildProjectName).deployproj')" Project="$(MSBuildProjectName).deployproj"/>
+	</Project>
