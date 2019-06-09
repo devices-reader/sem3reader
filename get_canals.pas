@@ -42,7 +42,7 @@ begin
   QueryGetCanals;
 end;
 
-function Line2Str(c: byte): string;
+function Line2Str(c: word): string;
 begin
   with mpCanals[c] do
   begin
@@ -58,10 +58,10 @@ begin
     else
       Result := '?';
     end;
-  end;
+  end
 end;
 
-function Type2Str(c: byte): string;
+function Type2Str(c: word): string;
 begin
   with mpCanals[c] do
   begin
@@ -72,7 +72,7 @@ begin
   end;
 end;
 
-function Tariffs2Str(c: byte): string;
+function Tariffs2Str(c: word): string;
 begin
   with mpCanals[c] do
   begin

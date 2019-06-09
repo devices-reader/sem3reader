@@ -12,7 +12,7 @@ inherited frmMain: TfrmMain
   OnResize = FormResize
   OnShow = FormShow
   ExplicitWidth = 1204
-  ExplicitHeight = 711
+  ExplicitHeight = 710
   PixelsPerInch = 120
   TextHeight = 19
   object stbMain: TStatusBar
@@ -67,7 +67,7 @@ inherited frmMain: TfrmMain
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      ActivePage = tbsParams
+      ActivePage = tbsFirst
       Align = alClient
       TabOrder = 0
       object tbsFirst: TTabSheet
@@ -275,7 +275,7 @@ inherited frmMain: TfrmMain
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ActivePage = tbsModem
+            ActivePage = tbsSocket
             Align = alClient
             TabOrder = 1
             OnChange = pgcModeChange
@@ -803,8 +803,6 @@ inherited frmMain: TfrmMain
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitLeft = 314
-          ExplicitWidth = 876
           object memInfo: TMemo
             Left = 0
             Top = 267
@@ -823,7 +821,6 @@ inherited frmMain: TfrmMain
             ParentFont = False
             ScrollBars = ssBoth
             TabOrder = 0
-            ExplicitWidth = 876
           end
           object pgcTop2: TPageControl
             Left = 0
@@ -837,14 +834,12 @@ inherited frmMain: TfrmMain
             ActivePage = tbsMain
             Align = alTop
             TabOrder = 1
-            ExplicitWidth = 876
             object tbsMain: TTabSheet
               Margins.Left = 4
               Margins.Top = 4
               Margins.Right = 4
               Margins.Bottom = 4
               Caption = #1054#1089#1085#1086#1074#1085#1099#1077
-              ExplicitWidth = 868
               object lblIntervalC: TLabel
                 Left = 24
                 Top = 192
@@ -1159,7 +1154,6 @@ inherited frmMain: TfrmMain
                 ItemHeight = 19
                 PopupMenu = ppmCurrents
                 TabOrder = 0
-                ExplicitLeft = 743
               end
               object edtlblIntervalCMin: TEdit
                 Left = 152
@@ -1704,7 +1698,6 @@ inherited frmMain: TfrmMain
             Margins.Right = 4
             Margins.Bottom = 4
             Caption = #1063#1090#1077#1085#1080#1077
-            ExplicitWidth = 297
             object clbMain: TCheckListBox
               Left = 0
               Top = 0
@@ -1721,7 +1714,6 @@ inherited frmMain: TfrmMain
               ShowHint = True
               TabOrder = 0
               OnMouseMove = clbMainMouseMove
-              ExplicitWidth = 302
             end
           end
           object tbsParamsWrite: TTabSheet
@@ -1731,7 +1723,6 @@ inherited frmMain: TfrmMain
             Margins.Bottom = 4
             Caption = #1047#1072#1087#1080#1089#1100
             ImageIndex = 1
-            ExplicitWidth = 297
             object lblTransitDevice: TLabel
               Left = 15
               Top = 186
@@ -2062,7 +2053,7 @@ inherited frmMain: TfrmMain
     Left = 624
     Top = 8
     object mitVersion: TMenuItem
-      Caption = #1074#1077#1088#1089#1080#1103' '#1086#1090' 12 '#1072#1074#1075#1091#1089#1090#1072' 2015 '#1075#1086#1076#1072
+      Caption = #1074#1077#1088#1089#1080#1103' '#1086#1090' 31 '#1080#1102#1083#1103' 2017 '#1075#1086#1076#1072
     end
   end
   object ppmList: TPopupMenu

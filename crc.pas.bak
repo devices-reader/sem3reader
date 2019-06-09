@@ -59,7 +59,7 @@ var
   i:      word;
   j:      byte;
 begin
-  if wSize < 2 then raise Exception.Create('Недостаточная длина буфера для подсчета CRC !');
+  if wSize < 2 then raise Exception.Create('Слишком малая длина буфера для подсчета CRC !');
 
   bCRCHi := $FF;
   bCRCLo := $FF;
@@ -81,7 +81,7 @@ var
   i:      word;
   j:      byte;
 begin
-  if wSize < 2 then raise Exception.Create('Недостаточная длина буфера для подсчета CRC !');
+  if wSize < 2 then raise Exception.Create('Слишком малая длина буфера для подсчета CRC !');
 
   bCRCHi := $FF;
   bCRCLo := $FF;

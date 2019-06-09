@@ -24,7 +24,7 @@ procedure Delay(MSec: longword);
 procedure AddInfo(stT: string);
 procedure AddInfoAll(stT: TStrings);
 procedure AddTerm(stT: string);
-procedure DeleteInfo(c: byte);
+procedure DeleteInfo(c: word);
 
 function GetColWidth: integer;
 function IsChecked(i: word): boolean;
@@ -131,7 +131,7 @@ begin
   frmMain.AddTerminal(stT, clGray);
 end;
 
-procedure DeleteInfo(c: byte);
+procedure DeleteInfo(c: word);
 var
   i: byte;
 begin

@@ -4,6 +4,9 @@ interface
 
 uses timez;
 
+function GetDaysInYear(bYear: byte): word;
+function GetDaysInMonth(bYear: byte; bMonth: byte): word;
+
 function SecIndexToDate(dwT: longword): times;
 
 function DateToMntIndex(tiT: times): longword;
@@ -23,9 +26,9 @@ implementation
 function GetDaysInYear(bYear: byte): word;
 begin
   if (bYear mod 4 = 0) then
-      Result := 366
+    Result := 366
   else
-      Result := 365;
+    Result := 365;
 end;
 
 function GetDaysInMonth(bYear: byte; bMonth: byte): word;

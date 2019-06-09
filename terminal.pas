@@ -20,15 +20,8 @@ implementation
 uses SysUtils, Graphics, main, support, kernel;
 
 function Time2Str: string;
-var
-  Hour,Min,Sec,MSec:  word;
 begin
-  DecodeTime(Now, Hour,Min,Sec,MSec);
-
-  Result := Int2Str(Hour) + '.' +
-            Int2Str(Min)  + '.' +
-            Int2Str(Sec)  + '.' +
-            Int2Str(MSec);
+  Result := FormatDateTime('hh:mm:ss:zzz dd.mm.yyyy',Now);
 end;
 
 function GetTimeDiff: longword;

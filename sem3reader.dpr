@@ -84,7 +84,8 @@ uses
   get_cntcanmon_x2 in 'get_cntcanmon_x2.pas',
   get_cntcan_x2 in 'get_cntcan_x2.pas',
   get_cntcantar_x2 in 'get_cntcantar_x2.pas',
-  get_cntcanmontar_x2 in 'get_cntcanmontar_x2.pas';
+  get_cntcanmontar_x2 in 'get_cntcanmontar_x2.pas',
+  get_serials in 'get_serials.pas';
 
 {$R *.RES}
 

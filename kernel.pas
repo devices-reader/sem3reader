@@ -27,7 +27,7 @@ type
   digital = record
     n:          word;
     iwDevice:   word;
-    dwAddress:  longword;
+    dwSerial:   longword;
     wNumber:    word;
     cwCanals:   word;
     wWidth:     word;

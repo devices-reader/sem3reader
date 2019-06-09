@@ -56,6 +56,8 @@ type
     acGetEventsCount,
     acGetEventsCount2,
 
+    acGetSerials,
+
     acNone,
 
     acGetOpen2,
@@ -130,7 +132,8 @@ get_cntcan, get_cntcantar, get_cntcanmon, get_cntcanmontar,
 get_cntcan_x2, get_cntcantar_x2, get_cntcanmon_x2, get_cntcanmontar_x2,
 get_currents1, get_currents2,
 get_transit, 
-get_events_counts, get_events, get_events_messages, get_events_counts2, get_events2
+get_events_counts, get_events, get_events_messages, get_events_counts2, get_events2,
+get_serials
 ;
 
 var
@@ -225,6 +228,8 @@ begin
     Items[Ord(acGetEventsCount)]   := InfoGetEventsCounts;
     Items[Ord(acGetEventsCount2)]  := InfoGetEventsCounts2;
 
+    Items[Ord(acGetSerials)]  := InfoGetSerials;
+
     for i := 1 to Ord(acNone) do Items.Strings[i-1] := Items.Strings[i-1];
   end;
 
@@ -290,6 +295,8 @@ begin
         Ord(acGetEventsCount):   begin BoxGetEventsCounts;   Inc(iwBox); exit; end;
         Ord(acGetEventsCount2):  begin BoxGetEventsCounts2;  Inc(iwBox); exit; end;
 
+        Ord(acGetSerials): begin BoxGetSerials; Inc(iwBox); exit; end;
+
         else ErrBox('Ошибка при задании списка запросов !');
       end;
     end;
@@ -333,7 +340,8 @@ begin
 
       if Checked[Ord(acGetCanals)] or
          Checked[Ord(acGetCurrents1)] or
-         Checked[Ord(acGetCurrents2)]
+         Checked[Ord(acGetCurrents2)] or
+         Checked[Ord(acGetSerials)]
       then begin
         Checked[Ord(acGetDigitals)] := True;
       end;
@@ -462,6 +470,8 @@ begin
 
       acGetEventsCount2:  ShowGetEventsCounts2;
       acGetEvents2:       ShowGetEvents2;
+
+      acGetSerials:     ShowGetSerials;
 
       acGetOpen2:       ShowGetOpen2;
       acGetTime20:      ShowGetTime20;

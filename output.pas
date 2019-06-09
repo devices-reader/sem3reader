@@ -261,6 +261,8 @@ begin
       if quT.Action = acGetEvents2      then quT.cwIn := 6+10+10;
       if quT.Action = acGetEventsMessage then quT.cwIn := 6+2+64+10;
 
+      if quT.Action = acGetSerials  then quT.cwIn := 6+GetDigitalsCount*8+10;
+
       queQuery := quT;
 
       InitPushZero;

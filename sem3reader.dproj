@@ -3,7 +3,7 @@
 			<ProjectGuid>{25A8A211-DCFC-466E-A38B-8D9380095027}</ProjectGuid>
 			<MainSource>sem3reader.dpr</MainSource>
 			<Base>True</Base>
-			<Config Condition="'$(Config)'==''">Release</Config>
+			<Config Condition="'$(Config)'==''">Debug</Config>
 			<AppType>Application</AppType>
 			<FrameworkType>VCL</FrameworkType>
 			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
@@ -185,6 +185,7 @@
 			<DCCReference Include="get_cntcan_x2.pas"/>
 			<DCCReference Include="get_cntcantar_x2.pas"/>
 			<DCCReference Include="get_cntcanmontar_x2.pas"/>
+			<DCCReference Include="get_serials.pas"/>
 			<None Include="sem3reader.todo"/>
 			<BuildConfiguration Include="Debug">
 				<Key>Cfg_2</Key>
@@ -216,7 +217,7 @@
 						<VersionInfo Name="MajorVer">1</VersionInfo>
 						<VersionInfo Name="MinorVer">0</VersionInfo>
 						<VersionInfo Name="Release">0</VersionInfo>
-						<VersionInfo Name="Build">215</VersionInfo>
+						<VersionInfo Name="Build">216</VersionInfo>
 						<VersionInfo Name="Debug">False</VersionInfo>
 						<VersionInfo Name="PreRelease">False</VersionInfo>
 						<VersionInfo Name="Special">False</VersionInfo>
@@ -228,7 +229,7 @@
 					<VersionInfoKeys>
 						<VersionInfoKeys Name="CompanyName"/>
 						<VersionInfoKeys Name="FileDescription"/>
-						<VersionInfoKeys Name="FileVersion">1.0.0.215</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.216</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName"/>
 						<VersionInfoKeys Name="LegalCopyright"/>
 						<VersionInfoKeys Name="LegalTrademarks"/>

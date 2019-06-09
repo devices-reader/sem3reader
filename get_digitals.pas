@@ -40,14 +40,14 @@ begin
   QueryGetDigitals;
 end;
 
-function GetAddress(d: byte): string;
+function GetSerial(d: byte): string;
 begin
   with mpDigitals[d] do
   begin
-    if dwAddress = $FFFFFFFF then
+    if dwSerial = $FFFFFFFF then
       Result := '-'
     else
-      Result := IntToStr(dwAddress);
+      Result := IntToStr(dwSerial);
   end;
 end;
 
@@ -99,7 +99,7 @@ begin
       n := PopWord;
 
       iwDevice := PopWord;
-      dwAddress := PopLong;
+      dwSerial := PopLong;
       wNumber := PopWord;
       cwCanals := PopWord;
       wWidth := PopWord;
@@ -118,7 +118,7 @@ begin
       s := PackStrR(IntToStr(n), 4);
       s := s + PackStrR(IntToStr(iwDevice), 4);
       s := s + PackStrR(sName, 32);
-      s := s + PackStrR(GetAddress(d), 14);
+      s := s + PackStrR(GetSerial(d), 14);
       s := s + PackStrR(IntToStr(wNumber), 12);
       s := s + PackStrR(IntToStr(wWidth), 16);
       s := s + PackStrR(GetCanals(d), 40);
